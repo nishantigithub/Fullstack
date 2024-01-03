@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Archana's Classes - Sign Up</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff;
+            margin: 0;
+            padding: 0;
+            color: #6b0080;
+            text-align: center;
+        }
+
+        header {
+            background-color: #6b0080;
+            padding: 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            color: #fff;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .signup-container {
+            background-color: #f5f5f5;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .signup-container h2 {
+            color: #6b0080;
+        }
+
+        .signup-container p {
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .signup-form label {
+            display: block;
+            margin-bottom: 8px;
+            text-align: left;
+            color: #6b0080;
+        }
+
+        .signup-form input,
+        .signup-form select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .signup-form button {
+            background-color: #6b0080;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Archana's Classes</h1>
+    </header>
+
+    <main>
+        <div class="signup-container">
+            <h2>Sign Up</h2>
+            <p>Create your account to get started.</p>
+
+            <form class="signup-form" id="signupForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender" required>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="not_specified">Don't wish to specify</option>
+                </select>
+
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" placeholder="Enter your age" required>
+
+                <label for="address">Address:</label>
+                <input type="text" id="address" name="address" placeholder="Enter your address" required>
+
+                <label for="city">City:</label>
+                <input type="text" id="city" name="city" placeholder="Enter your city" required>
+
+                <label for="state">State:</label>
+                <input type="text" id="state" name="state" placeholder="Enter your state" required>
+
+                <label for="pincode">Pincode:</label>
+                <input type="text" id="pincode" name="pincode" placeholder="Enter your pincode" required>
+
+                <button type="button" onclick="createAccount()">Sign Up</button>
+            </form>
+        </div>
+    </main>
+
+    <script>
+        function createAccount() {
+            // Simple client-side validation (you may need more thorough validation on the server side)
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const phone = document.getElementById('phone').value;
+            const gender = document.getElementById('gender').value;
+            const age = document.getElementById('age').value;
+            const address = document.getElementById('address').value;
+            const city = document.getElementById('city').value;
+            const state = document.getElementById('state').value;
+            const pincode = document.getElementById('pincode').value;
+
+            if (!name || !email || !password || !phone || !gender || !age || !address || !city || !state || !pincode) {
+                alert('Please fill in all fields.');
+                return;
+            }
+
+            // Send data to the server for further processing (not implemented in this example)
+            alert('Account created!'); // You may want to redirect the user to a login page or home page
+        }
+    </script>
+</body>
+</html>
